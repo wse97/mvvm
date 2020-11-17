@@ -1,0 +1,47 @@
+<resources>
+    <string name="facebook_app_id">327706384860996</string>
+    <string name="fb_login_protocol_scheme">fb327706384860996</string>
+    <string name="app_name">Eylul</string>
+    <string name="signUp">SIGN UP</string>
+    <string name="or">or</string>
+    <string name="fullName">Full Name</string>
+    <string name="phone">Mobile No.</string>
+    <string name="Active">ACTIVE</string>
+    <string name="ActiveCode">Active Code</string>
+    <string name="save">SAVE</string>
+    <string name="logout">Logout</string>
+    <string name="english">English</string>
+    <string name="arabic">عربي</string>
+    <string name="email">Email</string>
+    <string name="longText">It is a long established fact that a reader will be distracted by the readable content of a page</string>
+    <string name="requiredField">Required Field</string>
+    <string name="invalidEmail">Invalid Email</string>
+    <string name="invalidPhone">Invalid Phone</string>
+    <string name="passwordsDoNotMatch">Passwords Do Not Match</string>
+    <string name="detalis">Detalis</string>
+    <string name="notification">Notification</string>
+    <string name="notifications">Notifications</string>
+    <string name="userProfile">User Profile</string>
+    <string name="agreeToTheTermsAndConditions">I agree to the Terms and Conditions</string>
+    <string name="plzAgreeToTheTermsAndConditions">Please agree to the terms and conditions</string>
+    <string name="profileUpdated">Profile Updated</string>
+    <string name="MYORDERS">MY ORDERS</string>
+    <string name="date">"Date: "</string>
+    <string name="orderNo">"order No: "</string>
+    <string name="TotalBoxes">Total Boxes: </string>
+    <string name="CBM">CBM:</string>
+    <string name="Price">Price: </string>
+    <string name="Note">Note: </string>
+    <string name="Boxes">Boxes: </string>
+    <string name="noData">You have no order !</string>
+    <string name="noNotification">You have no notifications</string>
+    <string name="contactInformation">Contact Information</string>
+    <string name="about">About the application</string>
+    <string name="splashText"><![CDATA[Eylul Trade shipping & Clearance]]></string>
+    <string name="signIn">sign in</string>
+    <string name="ETA">ETA</string>
+    <string name="password">password</string>
+    <string name="emailOrPhone">Email Or Phone</string>
+    <string name="userName">Username</string>
+
+</resources>

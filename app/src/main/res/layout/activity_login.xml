@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.ugb.mvvmproject.ui.login.LoginViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:fillViewport="true"
+        tools:context=".ui.login.LoginActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageBack"
+                        android:visibility="gone"
+                        android:layoutDirection="ltr"
+                        android:src="@drawable/ic_back"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="16dp"
+                        android:padding="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:id="@+id/textSignIn"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/colorText"
+                        android:layout_gravity="center"
+                        android:layout_margin="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_below="@+id/textSignIn"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/image_logo" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:text="@string/splashText"
+                            android:textColor="@color/colorText"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="12sp"
+                            android:text="@{viewModel.userMutableLiveData.userModel.name}"
+                            android:textColor="@color/colorText" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lTextFullName"
+                        android:layout_marginTop="28dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:visibility="gone"
+                        android:textColorHint="@color/colorAccent"
+                        android:backgroundTint="@color/colorAccent"
+                        android:padding="4dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/eTextFullName"
+                            android:singleLine="true"
+                            android:hint="@string/fullName"
+                            android:visibility="visible"
+                            android:textColorHint="@color/colorAccent"
+                            android:backgroundTint="@color/colorAccent"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:textColorHint="@color/colorAccent"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="8dp"
+                        android:backgroundTint="@color/colorAccent"
+                        android:padding="4dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/eTextEmail"
+                            android:singleLine="true"
+                            android:hint="@string/userName"
+                            android:inputType="textEmailAddress"
+                            android:textColorHint="@color/colorAccent"
+                            android:backgroundTint="@color/colorAccent"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="8dp"
+                        android:visibility="visible"
+                        android:textColorHint="@color/colorAccent"
+                        android:backgroundTint="@color/colorAccent"
+                        android:padding="4dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/eTextPassword"
+                            android:singleLine="true"
+                            android:visibility="visible"
+                            android:hint="@string/password"
+                            android:inputType="textPassword"
+                            android:textColorHint="@color/colorAccent"
+                            android:backgroundTint="@color/colorAccent"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lTextMobile"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:visibility="gone"
+                        android:layout_marginEnd="16dp"
+                        android:textColorHint="@color/colorAccent"
+                        android:backgroundTint="@color/colorAccent"
+                        android:padding="4dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/eTextMobile"
+                            android:singleLine="true"
+                            android:hint="@string/phone"
+                            android:visibility="visible"
+                            android:inputType="phone"
+                            android:textColorHint="@color/colorAccent"
+                            android:backgroundTint="@color/colorAccent"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:visibility="gone"
+                        android:background="@color/colorAccent" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkboxTerms"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:buttonTint="@color/colorAccent"
+                        android:layout_gravity="start|center"
+                        android:layout_margin="24dp"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/colorAccent"
+                        android:text="@string/agreeToTheTermsAndConditions" />
+
+                    <Button
+                        android:id="@+id/btnSignUp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24sp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginBottom="24dp"
+                        android:background="@drawable/shape_btn"
+                        android:text="@string/signIn"
+                        android:onClick="@{() -> viewModel.onServerLoginClick()}"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="24sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#32000000"
+                android:clickable="true"
+                android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                >
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/avi"
+                    style="@style/AVLoadingIndicatorView"
+                    app:indicatorColor="@color/colorPrimary"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    app:indicatorName="BallSpinFadeLoaderIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>
+
+
